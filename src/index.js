@@ -21,7 +21,7 @@ app.post("/login", (req, res) => {
         }
 
         if (nome !== "admin" || senha !== "123") {
-            return res.status(404).json({
+            return res.status(401).json({
                 message: "O nome de usuário ou senha está incorreto ou não foi cadastrado!"
             });
         }
@@ -48,7 +48,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3000/img/ranger.png"
+                img: "http://localhost:30001/img/ranger.png"
             },
             {
                 id: 2,
@@ -56,7 +56,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3000/img/mustang.png"
+                img: "http://localhost:3001/img/mustang.png"
             },
             {
                 id: 3,
@@ -64,7 +64,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3000/img/territory.png"
+                img: "http://localhost:3001/img/territory.png"
             },
             {
                 id: 4,
@@ -72,7 +72,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3000/img/broncoSport.png"
+                img: "http://localhost:3001/img/broncoSport.png"
             }
         ];
 
@@ -111,7 +111,7 @@ app.post("/vehicleData", (req, res) => {
                 });
         
             default:
-                return res.status(404).json({
+                return res.status(400).json({
                     message: "Código VIN utilizado não foi encontrado!"
                 });
         }
@@ -124,6 +124,6 @@ app.post("/vehicleData", (req, res) => {
     }
 })
 
-app.listen(3000, () => {
-    console.log("http://localhost:3000/");
+app.listen(3001, () => {
+    console.log("http://localhost:3001/");
 });
