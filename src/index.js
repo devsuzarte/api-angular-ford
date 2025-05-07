@@ -48,7 +48,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:30001/img/ranger.png"
+                img: "http://localhost:30001/ranger.png"
             },
             {
                 id: 2,
@@ -56,7 +56,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3001/img/mustang.png"
+                img: "http://localhost:3001/mustang.png"
             },
             {
                 id: 3,
@@ -64,7 +64,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3001/img/territory.png"
+                img: "http://localhost:3001/territory.png"
             },
             {
                 id: 4,
@@ -72,7 +72,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3001/img/broncoSport.png"
+                img: "http://localhost:3001/broncoSport.png"
             }
         ];
 
