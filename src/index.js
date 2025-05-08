@@ -48,30 +48,34 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
+                vin: "2FRHDUYS2Y63NHD22454",
                 img: "http://localhost:30001/ranger.png"
             },
             {
                 id: 2,
                 vehicle: "Mustang",
-                volumetotal: 1500,
-                connected: 500,
-                softwareUpdates: 750,
+                volumetotal: 1000,
+                connected: 600,
+                softwareUpdates: 310,
+                vin: "2RFAASOYS4E4HDU34875",
                 img: "http://localhost:3001/mustang.png"
             },
             {
                 id: 3,
                 vehicle: "Territory",
-                volumetotal: 1500,
-                connected: 500,
-                softwareUpdates: 750,
+                volumetotal: 1900,
+                connected: 270,
+                softwareUpdates: 970,
+                vin: "1GKFK16K0RJ736886",
                 img: "http://localhost:3001/territory.png"
             },
             {
                 id: 4,
                 vehicle: "Bronco Sport",
-                volumetotal: 1500,
-                connected: 500,
-                softwareUpdates: 750,
+                volumetotal: 1200,
+                connected: 310,
+                softwareUpdates: 290,
+                vin: "JH4DA9350PS016433",
                 img: "http://localhost:3001/broncoSport.png"
             }
         ];
@@ -104,11 +108,31 @@ app.post("/vehicleData", (req, res) => {
                 return res.status(200).json({
                     id: 2,
                     odometro: 10000,
-                    nivelCombustivel: 90,
+                    nivelCombustivel: 60,
                     status: "on",
-                    lat: -12.2322,
-                    long: -35.2314
+                    lat: 14.2321,
+                    long: -12.5344
                 });
+
+            case "1GKFK16K0RJ736886":
+                return res.status(200).json({
+                    id: 3,
+                    odometro: 80000,
+                    nivelCombustivel: 45,
+                    status: "off",
+                    lat: 44.2321,
+                    long: 22.5344
+                })
+
+            case "JH4DA9350PS016433":
+                return res.status(200).json({
+                    id: 4,
+                    odometro: 120000,
+                    nivelCombustivel: 30,
+                    status: "off",
+                    lat: -10.2321,
+                    long: 63.5344
+                })
         
             default:
                 return res.status(400).json({
